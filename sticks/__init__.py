@@ -1,4 +1,4 @@
-from sticks.sticks import main
+from sticks import main
 
 if __name__ == '__main__':
     main()
