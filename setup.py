@@ -1,15 +1,15 @@
 import os
 from setuptools import setup, find_packages
 
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+with open("README.rst") as readme_file:
+    long_description = readme_file.read()
 
 setup(  
     name="sticks",
     packages=find_packages(),
-    version='0.0.4',
+    version='0.0.5',
     description="Simple game application.",
-    long_description=read('README.rst'),
+    long_description=long_description,
     author="ganeshhubale.",
     author_email="ganeshhubale03@gmail.com",
     url="https://github.com/ganeshhubale/game_of_sticks",
