@@ -139,7 +139,7 @@ Examples
 
 
 How to install source code for development 
-**********************************************
+******************************************
 * Clone project from github:
 
 .. code-block:: bash
