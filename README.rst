@@ -8,7 +8,8 @@ Readit - Command Line Tool
 
 .. image:: https://asciinema.org/a/XHY1hKrgOry69OeWG04iucT1k.png
    :alt: asciicast
-   :scale: 50%
+   :height: 50px
+   :width: 50px
    :target: https://asciinema.org/a/XHY1hKrgOry69OeWG04iucT1k?t=1
 
 Introduction
