@@ -1,7 +1,7 @@
 
 
 game of sticks
-==============
+=============
 
 Game created using python
 -------------------------

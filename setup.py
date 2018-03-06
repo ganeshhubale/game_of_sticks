@@ -7,7 +7,7 @@ with open("README.rst") as readme_file:
 setup(  
     name="sticks",
     packages=find_packages(),
-    version='0.0.5',
+    version='0.0.6',
     description="Simple game application.",
     long_description=long_description,
     author="ganeshhubale.",
