@@ -4,12 +4,13 @@ Readit - Command Line Tool
 
 .. class:: no-web no-pdf
 
-|Python| |Licence| |Build Status| 
+|Python| |Licence| |Build Status| |docs passing|
 
-.. image:: https://asciinema.org/a/XHY1hKrgOry69OeWG04iucT1k.png
-   :alt: asciicast
-   :align: center
-   :target: https://asciinema.org/a/XHY1hKrgOry69OeWG04iucT1k?t=1
+
+.. raw:: html
+
+    <a href="https://asciinema.org/a/XHY1hKrgOry69OeWG04iucT1k?t=1" target="_blank"><img src="https://asciinema.org/a/XHY1hKrgOry69OeWG04iucT1k.png" width="900" height="500"/></a>
+
 
 Introduction
 ************
@@ -27,6 +28,7 @@ Features
 * Update a Bookmarked URL with specific ID
 * URL validation
 * Open URL in browser
+* Export bookmarks into the CSV file
 
 
 Dependencies
@@ -46,28 +48,29 @@ Installation
 readit is available on PyPi and can be installed with pip3:
 
 .. code-block:: bash
-	
-	pip3 install --user readit
+
+    pip3 install --user readit
 
 Command line options
 ********************
 .. code-block:: bash
 
-	Usage: readit [OPTIONS] [INSERT]...
+    Usage: readit [OPTIONS] [INSERT]...
 
-	  Readit - Command-line bookmark manager tool.
+      Readit - Command-line bookmark manager tool.
 
-	Options:
-  	-a, --add TEXT...     Add URLs with space-separated
-  	-t, --tag TEXT...     Add Tag with space-separated URL
-  	-d, --delete TEXT     Remove a URL of particular ID
-  	-c, --clear TEXT...   Clear bookmarks
-  	-u, --update TEXT...  Update a URL for specific ID
-  	-s, --search TEXT     Search all bookmarks by Tag
-  	-v, --view TEXT...    Show bookmarks
-  	-o, --openurl TEXT    Open URL in Browser 
-  	-V, --version         Check latest version
-  	--help                Show this message and exit.
+    Options:
+    -a, --add TEXT...     Add URLs with space-separated
+    -t, --tag TEXT...     Add Tag with space-separated URL
+    -d, --delete TEXT     Remove a URL of particular ID
+    -c, --clear TEXT...   Clear bookmarks
+    -u, --update TEXT...  Update a URL for specific ID
+    -s, --search TEXT     Search all bookmarks by Tag
+    -v, --view TEXT...    Show bookmarks
+    -o, --openurl TEXT    Open URL in Browser
+    -V, --version         Check latest version
+    -e, --export TEXT...  Export URLs in csv file
+    --help                Show this message and exit.
 
 
 Examples
@@ -76,101 +79,109 @@ Examples
 
 .. code-block:: bash
 
-	$ readit url1 url2 ...
-	or
-	$ readit --add url1 url2 ...
-	or
-	$ readit -a url1 url2 ...
+    $ readit url1 url2 ...
+    or
+    $ readit --add url1 url2 ...
+    or
+    $ readit -a url1 url2 ...
 
 2. **View** all available bookmarks:
 
 .. code-block:: bash
 
-	$ readit -v
-	or 
-	$ readit --view
+    $ readit -v
+    or
+    $ readit --view
 
 3. **Update** a bookmark using it's ID:
 
 .. code-block:: bash
-	
-	$ readit -u url_id url
-	or
-	$ readit --update url_id url
+
+    $ readit -u url_id url
+    or
+    $ readit --update url_id url
 
 4. **Delete** a bookmarked URL using it's ID:
 
 .. code-block:: bash
-	
-	$ readit -d url_id
-	or
-	$ readit --delete url_id 
+
+    $ readit -d url_id
+    or
+    $ readit --delete url_id
 
 5. **Clear** all the bookmarks:
 
 .. code-block:: bash
 
-	$ readit -c
-	or
-	$ readit --clear
+    $ readit -c
+    or
+    $ readit --clear
 
 6. **Bookmark** URL with TAG:
 
 .. code-block:: bash
 
-	$ readit -t tag_name url
-	or
-	$ readit --tag tag_name url
+    $ readit -t tag_name url
+    or
+    $ readit --tag tag_name url
 
 7. **Search** and **Display** all bookmarks using TAG:
 
 .. code-block:: bash
-	
-	$ readit -s tag_name 
-	or
-	$ readit --search tag_name
+
+    $ readit -s tag_name
+    or
+    $ readit --search tag_name
 
 8. Open URL in Browser using specific ID:
 
 .. code-block:: bash
 
-	$ readit -o urlid
-	or
-	$ readit --openurl urlid
+    $ readit -o urlid
+    or
+    $ readit --openurl urlid
 
+9. **Export** bookmarks into the CSV file:
+
+.. code-block:: bash
+
+   $ readit --export
+   or
+   $ readit -e
 
 How to install source code for development 
-******************************************
+**********************************************
 * Clone project from github:
 
 .. code-block:: bash
 
-	$ git clone https://github.com/projectreadit/readit.git
+    $ git clone https://github.com/projectreadit/readit.git
 
 * We recommend to create and activate a virtualenv first:
 
 .. code-block:: bash
 
-	$ cd readit/
+    $ cd readit/
   
-  	$ virtualenv venv 
+    $ virtualenv venv
 
-   	$ source venv/bin/activate
-  	
-  	(venv) $
+    $ source venv/bin/activate
+
+    (venv) $
 
 * To install using setup.py file:
 
 .. code-block:: bash
  
-		(venv) $ python setup.py install
+        (venv) $ python setup.py install
 
 * To make build of project:
 
 .. code-block:: bash
-	
-		(venv) $ python setup.py build
 
+        (venv) $ python setup.py build
+
+************************************************************************
 `Licence <https://github.com/projectreadit/readit/blob/master/LICENSE>`_
 ************************************************************************
 Readit - Command line tool is licensed under `GNU General Public License v3.0. <https://github.com/projectreadit/readit/blob/master/LICENSE>`_
@@ -182,3 +193,8 @@ Readit - Command line tool is licensed under `GNU General Public License v3.0. <
 
 .. |Build Status| image:: https://travis-ci.org/projectreadit/readit.svg?branch=master
     :target: https://travis-ci.org/projectreadit/readit
+
+.. |docs passing| image:: https://readthedocs.org/projects/readit/badge/?version=latest
+    :target: http://readit.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
