@@ -17,9 +17,9 @@ setup(
     license="MIT",
     py_modules=['sticks.__init__'],
     namespace_packages=[],
-    entry_points={
-        'console_scripts': [
-            'sticks = sticks.__init__:main',
-        ],
+  #  entry_points={
+   #     'console_scripts': [
+    #        'sticks = sticks.__init__:main',
+     #   ],
     },
 )
